@@ -1,0 +1,44 @@
+.Header{
+    // border-bottom: 1px solid black;
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+    scroll-behavior: smooth;
+    max-width: 100%;
+    padding:2%;
+    width: 100%;
+    position: fixed;
+    backdrop-filter: blur(5px);
+    
+    
+    
+    li{
+        padding:5%;
+    }
+
+    nav a:hover{
+        color: var(--hoverColor, white)
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    ul{
+        list-style-type: none;
+        display:flex;
+        grid-area: 'links';
+        
+        //gap:var(--gap);
+        // justify-content: flex-start;
+        // align-items: center;
+
+    }
+
+}
+
+.logo{
+    grid-area: 'logo';
+    margin-right: 1rem;
+    cursor: pointer;
+}

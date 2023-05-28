@@ -1,0 +1,41 @@
+.project{
+    display: grid;
+    grid-template-columns: repeat(1fr, 2);
+    grid-template-rows: 15% auto 20%;
+    grid-template-areas: 
+    'img title'
+    'img desc'
+    'img code-and-stack';
+    border: 2px solid black; 
+    padding:5%;
+    margin:3%;
+}
+
+.project .example{
+    
+    grid-area: img;
+}
+.project .example img{
+    width:100%;
+    padding-right: 5%;
+}
+
+.project .title{
+    grid-area: title;
+    padding:0 10%;
+}
+
+.project .descp{
+    grid-area: desc;
+    padding:5%;
+}
+.project .code_and_stack{
+    grid-area: code-and-stack;
+    display: flex;
+    
+}
+
+.project .stack{
+    display: flex;
+    align-items: center;
+}
