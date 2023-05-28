@@ -1,95 +1,92 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import emoji from '../public/liel-emoji.png';
+import image from '../public/liel-cropped.png';
+import styles from './page.module.css';
+import Project from './_components/Project';
+import { Itech, projects, techStack } from './projectsList';
+import { ReactNode } from 'react';
+
+const langOptions = {
+  he:'he',
+  en:'en'
+} as const
+type langOptionType = keyof typeof langOptions;
+
+// export interface Iproject{
+//   title:string,
+//   githubUrl:string,
+//   websiteUrl:string,
+//   desc:string,
+//   tech:Itech[],
+//   media:StaticImageData
+// }
+// interface Itech{
+//   title:string,
+//   icon:StaticImageData
+// }
+
+type techT =keyof typeof techStack;
 
 export default function Home() {
+  
+  // const projects:Iproject[] = [{title:'PomodoTodo', desc:"create and manage your to-do list, as well as track your progress.", tech:[{title:'React', icon:react}], githubUrl:'https://github.com/lielbidago/Todo-Pomodoro', websiteUrl:'https://pomodotodo.vercel.app/', media:PomodoTodo}]
+  // const [lang, setLang] = useState<langOptionType>(langOptions.en);
+  
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+
+      <div className="intro" aria-label='introduction'>
+          <div className="intro-content">
+            <div className="text">
+              <span>hi! <br/> im liel,and I'm a junior web developer!<br/></span>
+              </div>
+            <div className="emoji">
+              <img src={emoji.src} alt='emoji-of-liel'/>
+            </div>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="about" id="about">
+        <div className="about-content">
+            <h1>About Me</h1>
+              <img src={image.src} alt='image-of-liel'/>
+            <div className="text">
+              <span >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, fuga laborum! Quasi aspernatur architecto dolore recusandae inventore labore magni, fuga enim quod molestiae doloribus quidem magnam hic officia consequuntur? Debitis.</span>
+            </div>
+            <div className="tech-stack">
+              {Object.keys(techStack).map((tch)=><img src={techStack[tch as techT].icon.src} alt={techStack[tch as techT].title} />)}
+              
+            </div>            
+          </div>
+      </div>
+        <div className="projects">
+          <h1>Projects</h1>
+          {projects.slice(Math.min(0,projects.length,2)).map((p)=> <Project project={p}/>)}
+          <a href="/projects" className="for-more button">For More..</a>
       </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+      <div className="contact" id='contact'>
+          <h1>Contact Me</h1>
+          <div className="form">
+          <form>
+            <div className="name">
+              <label htmlFor="name">Name:</label>
+              <input type='text' minLength={2} id='name' maxLength={100}></input>
+            </div>
+            <div className="Email">
+              <label htmlFor="email">Email:</label>
+              <input type='email' id='email' required></input>
+            </div>
+            <div className="message">
+              <label htmlFor="message">Message:</label>
+              <textarea id='message' rows={6} placeholder='hi:)' required minLength={2} maxLength={500}/>
+            </div>
+            <button type='submit'>Send</button>
+            
+          </form>            
+          </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+    </div>
+        
+      
     </main>
   )
 }
