@@ -17,7 +17,7 @@ export default function Home() {
       <div className="intro" aria-label='introduction'>
           <div className="intro-content">
             <div className="text">
-              <span>hi! <br/> im liel,and I'm a junior web developer!<br/></span>
+              <span>hi! <br/> Im liel,and I&apos;m a junior web developer!<br/></span>
               </div>
             <div className="emoji">
               <img src={emoji.src} alt='emoji-of-liel'/>
