@@ -1,5 +1,5 @@
 import styles from './Header.module.scss';
-import img from '../../public/bg1.jpg';
+import img from '../../public/bg2.jpg';
 
 export default function Header(){
     return (

@@ -3,39 +3,13 @@ import image from '../public/liel-cropped.png';
 import styles from './page.module.css';
 import Project from './_components/Project';
 import { projects, techStack } from './projectsList';
-import { FormEvent } from 'react';
-import Contactform from './_components/Form';
 import LinkedinSVG from './_logos/linkedin';
 import GithubSVG from './_logos/github';
 
 
-const langOptions = {
-  he:'he',
-  en:'en'
-} as const
-type langOptionType = keyof typeof langOptions;
-
-// export interface Iproject{
-//   title:string,
-//   githubUrl:string,
-//   websiteUrl:string,
-//   desc:string,
-//   tech:Itech[],
-//   media:StaticImageData
-// }
-// interface Itech{
-//   title:string,
-//   icon:StaticImageData
-// }
-
 type techT =keyof typeof techStack;
 
 export default function Home() {
-  
-
-
-  // const projects:Iproject[] = [{title:'PomodoTodo', desc:"create and manage your to-do list, as well as track your progress.", tech:[{title:'React', icon:react}], githubUrl:'https://github.com/lielbidago/Todo-Pomodoro', websiteUrl:'https://pomodotodo.vercel.app/', media:PomodoTodo}]
-  // const [lang, setLang] = useState<langOptionType>(langOptions.en);
   
   return (
     <main className={styles.main}>
