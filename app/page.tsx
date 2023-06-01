@@ -12,7 +12,7 @@ type techT =keyof typeof techStack;
 export default function Home() {
   
   return (
-    <main className={styles.main}>
+    <div className={styles.main}>
 
       <div className="intro" aria-label='introduction'>
           <div className="intro-content">
@@ -33,7 +33,7 @@ export default function Home() {
                       user-friendly websites and a drive to continuously learn.</span>
             </div>
             <div className="tech-stack">
-              {Object.keys(techStack).map((tch)=><img src={techStack[tch as techT].icon.src} alt={techStack[tch as techT].title} />)}
+              {Object.keys(techStack).map((tch)=><img src={techStack[tch as techT].icon.src} alt={techStack[tch as techT].title} key={techStack[tch as techT].title} />)}
               
             </div>            
           </div>
@@ -60,6 +60,6 @@ export default function Home() {
       </div>
         
       
-    </main>
+    </div>
   )
 }

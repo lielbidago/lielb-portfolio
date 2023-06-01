@@ -7,7 +7,7 @@ export default function Projects(){
         <main>
             <h1 className={styles.title}>My Projects</h1>
             <div className={styles.projectsMain}>
-               {projects.map((p)=> <Project project={p}/>)} 
+               {projects.map((p, index)=> <Project project={p} key={index}/>)} 
             </div>
             
         </main>
