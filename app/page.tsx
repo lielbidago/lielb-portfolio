@@ -2,8 +2,12 @@ import emoji from '../public/liel-emoji.png';
 import image from '../public/liel-cropped.png';
 import styles from './page.module.css';
 import Project from './_components/Project';
-import { Itech, projects, techStack } from './projectsList';
-import { ReactNode } from 'react';
+import { projects, techStack } from './projectsList';
+import { FormEvent } from 'react';
+import Contactform from './_components/Form';
+import LinkedinSVG from './_logos/linkedin';
+import GithubSVG from './_logos/github';
+
 
 const langOptions = {
   he:'he',
@@ -28,6 +32,8 @@ type techT =keyof typeof techStack;
 
 export default function Home() {
   
+
+
   // const projects:Iproject[] = [{title:'PomodoTodo', desc:"create and manage your to-do list, as well as track your progress.", tech:[{title:'React', icon:react}], githubUrl:'https://github.com/lielbidago/Todo-Pomodoro', websiteUrl:'https://pomodotodo.vercel.app/', media:PomodoTodo}]
   // const [lang, setLang] = useState<langOptionType>(langOptions.en);
   
@@ -49,7 +55,8 @@ export default function Home() {
             <h1>About Me</h1>
               <img src={image.src} alt='image-of-liel'/>
             <div className="text">
-              <span >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, fuga laborum! Quasi aspernatur architecto dolore recusandae inventore labore magni, fuga enim quod molestiae doloribus quidem magnam hic officia consequuntur? Debitis.</span>
+              <span >Possessing a passion for creating clean, efficient code, dynamic and
+                      user-friendly websites and a drive to continuously learn.</span>
             </div>
             <div className="tech-stack">
               {Object.keys(techStack).map((tch)=><img src={techStack[tch as techT].icon.src} alt={techStack[tch as techT].title} />)}
@@ -57,34 +64,26 @@ export default function Home() {
             </div>            
           </div>
       </div>
-        <div className="projects">
+      <div className="projects">
           <h1>Projects</h1>
-          {projects.slice(Math.min(0,projects.length,2)).map((p)=> <Project project={p}/>)}
+          <div className="container">
+            {projects.slice(Math.min(0,projects.length,2)).map((p)=> <Project project={p}/>)}
+          </div>
           <a href="/projects" className="for-more button">For More..</a>
       </div>
-
       <div className="contact" id='contact'>
-          <h1>Contact Me</h1>
-          <div className="form">
-          <form>
-            <div className="name">
-              <label htmlFor="name">Name:</label>
-              <input type='text' minLength={2} id='name' maxLength={100}></input>
-            </div>
-            <div className="Email">
-              <label htmlFor="email">Email:</label>
-              <input type='email' id='email' required></input>
-            </div>
-            <div className="message">
-              <label htmlFor="message">Message:</label>
-              <textarea id='message' rows={6} placeholder='hi:)' required minLength={2} maxLength={500}/>
-            </div>
-            <button type='submit'>Send</button>
-            
-          </form>            
+        <div className="contactMain">
+          <h1>Contact me</h1>
+          <div className="linksSection">
+            <p>contact me at:</p>
+            <a href="https://github.com/lielbidago" className="links" target='_blank'><GithubSVG/></a><span className='or'>or</span> 
+            <a href="https://www.linkedin.com/in/liel-bidago/" className="links" target='_blank'><LinkedinSVG/></a>
+            <p>or email me  </p>
+            <a href="mailto:lielbidago@gmail.com" className='email'>here</a> 
           </div>
-
-    </div>
+          
+        </div>    
+      </div>
         
       
     </main>

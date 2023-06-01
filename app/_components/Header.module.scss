@@ -5,20 +5,43 @@
     align-items: center;
     scroll-behavior: smooth;
     max-width: 100%;
-    padding:2%;
+    padding:1%;
+
     width: 100%;
     position: fixed;
+    top:0;
     backdrop-filter: blur(5px);
-    
+    z-index: 9999;
     
     
     li{
-        padding:5%;
+        padding:5% 10%;
     }
 
-    nav a:hover{
-        color: var(--hoverColor, white)
+    li:hover{
+        backdrop-filter: blur(12px) saturate(200%);
+        -webkit-backdrop-filter: blur(12px) saturate(300%);
+        background-color: rgba(255, 255, 255, 0.198);
+        border-radius: 12px;
+        border: 1px solid rgba(209, 213, 219, 0.3);
+        
+
     }
+    
+    .About:hover a{
+        color:var(--theme4)
+    }
+    .Contact:hover a{
+        color:var(--theme4)
+    }
+    .Projects:hover a{
+        color:var(--theme1)
+    }
+    .Resume:hover a{
+        color:var(--theme2)
+    }
+
+    
 
     a{
         text-decoration: none;

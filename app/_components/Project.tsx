@@ -9,7 +9,7 @@ export default function Project({project}:projectProps){
     return (
         <div className={styles.project}>
             <div className={styles.example}>
-                <a href={project.websiteUrl}>
+                <a href={project.websiteUrl} target="_blank">
                     <img src={project.media.src} alt={project.title+' image'} />
                 </a>
             </div>
@@ -18,10 +18,10 @@ export default function Project({project}:projectProps){
                 <p className={styles.descp}>{project.desc}</p>
                 <div className={styles.code_and_stack}>
                     <div className={styles.stack}>
-                        {project.tech.map((t) => <img src={t.icon.src} alt={t.title+' icon'} width='5%'/>)}
+                        {project.tech.map((t) => <img src={t.icon.src} alt={t.title+' icon'}/>)}
                     </div>
-                    {project.githubUrl.client && <a href={project.githubUrl.client}>Code (Client)</a>}
-                    {project.githubUrl.server && <a href={project.githubUrl.server}>Code (Server)</a>}            
+                    {project.githubUrl.client && <a className={styles.button} href={project.githubUrl.client}>Code <span>(Client)</span></a>}
+                    {project.githubUrl.server && <a className={styles.button} href={project.githubUrl.server}>Code <span>(Server)</span></a>}            
                 </div>
 
             </div>

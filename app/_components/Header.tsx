@@ -1,4 +1,5 @@
 import styles from './Header.module.scss';
+import img from '../../public/bg1.jpg';
 
 export default function Header(){
     return (
@@ -8,20 +9,20 @@ export default function Header(){
             </div>
             <nav className="NavBar">
                 <ul>
-                    <li className="About">
-                        <a href='#about'>About</a>
+                    <li className={styles.About}>
+                        <a href='/#about'>About</a>
                     </li>
 
-                    <li className="Projects">
+                    <li className={styles.Projects}>
                         <a href='projects'>Projects</a>
                     </li>
 
-                    <li className="Contact">
-                        <a href='#contact'>Contact</a>
+                    <li className={styles.Contact}>
+                        <a href='/#contact'>Contact</a>
                     </li>   
 
-                    <li className="Resume">
-                        <a href='Resume'>Resume</a>
+                    <li className={styles.Resume}>
+                        <a href={img.src} download>Resume</a>
                     </li>   
                                    
                 </ul>

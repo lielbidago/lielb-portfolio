@@ -1,12 +1,15 @@
 import Project from "../_components/Project";
 import { projects } from "../projectsList";
-
+import styles from './page.module.scss';
 
 export default function Projects(){
     return (
         <main>
-            <h1>My Projects</h1>
-            {projects.map((p)=> <Project project={p}/>)}
+            <h1 className={styles.title}>My Projects</h1>
+            <div className={styles.projectsMain}>
+               {projects.map((p)=> <Project project={p}/>)} 
+            </div>
+            
         </main>
     )
 }
