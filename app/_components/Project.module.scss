@@ -33,10 +33,14 @@
 
 .project .example{
     grid-area: img;
-}
-.project .example img{
+    position: relative;
     width:100%;
-    padding-right: 5%;
+    max-width: 700px;
+    aspect-ratio: 4/2;
+}
+
+.project .example img{
+    // width:100%;
 }
 
 .project .title{
@@ -52,7 +56,7 @@
 .project .code_and_stack{
     grid-area: code-and-stack;
     display: flex;
-    
+    justify-content: space-between;
 }
 .stack img{
     width: 15%;

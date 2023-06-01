@@ -5,6 +5,7 @@ import Project from './_components/Project';
 import { projects, techStack } from './projectsList';
 import LinkedinSVG from './_logos/linkedin';
 import GithubSVG from './_logos/github';
+import Image from 'next/image';
 
 
 type techT =keyof typeof techStack;
@@ -19,15 +20,18 @@ export default function Home() {
             <div className="text">
               <span>hi! <br/> Im liel,and I&apos;m a junior web developer!<br/></span>
               </div>
-            <div className="emoji">
-              <img src={emoji.src} alt='emoji-of-liel'/>
+            <div className="emoji imageContainer">
+              <Image src={emoji.src} alt='emoji-of-liel' width={350} height={350}/>
             </div>
         </div>
       </div>
       <div className="about" id="about">
         <div className="about-content">
             <h1>About Me</h1>
-              <img src={image.src} alt='image-of-liel'/>
+              <div className="imageContainer">
+                <Image src={image.src} alt='image-of-liel' fill/>
+              </div>
+              
             <div className="text">
               <span >Possessing a passion for creating clean, efficient code, dynamic and
                       user-friendly websites and a drive to continuously learn.</span>

@@ -41,7 +41,7 @@ sql:{title:'SQL', icon:sql}}
   
 export const projects:Iproject[] = [
     {title:'PomodoTodo', 
-    desc:"create and manage your to-do list, as well as time your work.", 
+    desc:"create and manage your to-do list, time your work, and track your progress.", 
     tech:[techStack.react, techStack.ts, techStack.bootstrap, techStack.sass], 
     githubUrl:{client:'https://github.com/lielbidago/Todo-Pomodoro'}, 
     websiteUrl:'https://pomodotodo.vercel.app/', 

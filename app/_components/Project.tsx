@@ -1,4 +1,5 @@
 
+import Image from "next/image";
 import { Iproject } from "../projectsList";
 import styles from './Project.module.scss';
 interface projectProps{
@@ -11,7 +12,7 @@ export default function Project({project}:projectProps){
         <div className={styles.project}>
             <div className={styles.example}>
                 <a href={project.websiteUrl} target="_blank">
-                    <img src={project.media.src} alt={project.title+' image'} />
+                    <Image src={project.media.src} alt={project.title+' image'} fill/>
                 </a>
             </div>
             <div className={styles.desc}>
@@ -19,7 +20,7 @@ export default function Project({project}:projectProps){
                 <p className={styles.descp}>{project.desc}</p>
                 <div className={styles.code_and_stack}>
                     <div className={styles.stack}>
-                        {project.tech.map((t) => <img src={t.icon.src} alt={t.title+' icon'} key={t.title}/>)}
+                        {project.tech.map((t) => <Image src={t.icon.src} alt={t.title+' icon'} key={t.title} width={50} height={30}/>)}
                     </div>
                     {project.githubUrl.client && <a className={styles.button} href={project.githubUrl.client}>Code <span>(Client)</span></a>}
                     {project.githubUrl.server && <a className={styles.button} href={project.githubUrl.server}>Code <span>(Server)</span></a>}            
