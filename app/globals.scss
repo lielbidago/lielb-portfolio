@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&display=swap');
+
+:root{
+  --textColor: rgb(247, 247, 247);
+  --hoverColor:rgba(255, 255, 255, 0.85);
+  --theme1: rgb(205, 193, 159);
+  --theme2: rgb(214, 168, 103);
+  --theme3:rgb(215, 193, 167);
+  --theme4:rgb(146, 199, 181);
+  --theme5:rgb(217, 217, 217);
+  font-family: 'Maven Pro', sans-serif;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  color:white;
+  /* border: 2px solid black; */
+}
+
+html{
+  width:100%;
+
+}
+
+
+body{
+  /* background-image: linear-gradient(rgba(185, 185, 185, 0.25),rgba(53, 53, 53, 0.344)), url('../public/bg2.jpg');
+  background-size: cover;
+  background-position: center; */
+  background: var(--theme1);
+  background: 
+  radial-gradient(circle,  var(--theme1) 0%,
+  var(--theme2) 41%,
+  var(--theme3) 56%, var(--theme4) 72%, var(--theme5) 100%);
+  font-size: larger;
+  width:100%;
+}
+
+a{
+  color: var(--textColor)
+}
+
+p, span{
+  max-width: 70%;
+  text-align: center;
+  
+}
+
+button, .button{
+  padding:1%;
+  text-decoration: none;
+  border-radius: 12px;
+  border: 1.5px solid var(--textColor);
+  background-color: transparent;
+}
+
+button:hover, .button:hover, .email:hover{
+  color: var(--theme4);
+  background-color: var(--textColor);
+}
+
+h1{
+  text-align: center;
+  font-size: 1.5em;
+  padding:2%;
+  font-weight: light;
+}
+
+
+.links{
+  width:20%;
+}
+
+
+@media (max-width:768px) {
+  
+}
+
+/* .contact .form{
+  backdrop-filter: blur(12px) saturate(200%);
+  -webkit-backdrop-filter: blur(12px) saturate(200%);
+  background-color: rgba(255, 255, 255, 0.34);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  padding: 10% 100%;
+  margin:0;
+  margin-top:30%;
+} */
+
+/* .contact form > *{
+  padding: 3%;
+  margin:2%;
+  
+} */
+/* 
+.contact form{
+  display: grid;
+  gap:1%;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: 'title title'
+  'name email'
+  'message message'
+  'button button';
+}
+form h1{
+  grid-area: title;
+}
+
+form .name{
+  grid-area: name;
+}
+form .email{
+  grid-area: email;
+}
+form .message{
+  grid-area: message;
+}
+form .button{
+  grid-area: button;
+  text-align: center;
+}
+
+
+.contact form input, .contact form textarea{
+  backdrop-filter: blur(12px) saturate(200%);
+  -webkit-backdrop-filter: blur(12px) saturate(200%);
+  background-color: rgba(255, 255, 255, 0.34);
+  border:1px solid white;
+  border-radius: 10px;
+  color:black;
+}
+
+.contact form textarea{
+  color:black;
+  padding:4%;
+  margin: 3% 0;
+}
+
+.message{
+  display: flex;
+  flex-direction: column;
+} */
+

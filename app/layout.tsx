@@ -1,5 +1,5 @@
 import Header from './_components/Header'
-import './globals.css'
+import './globals.scss'
 import { Maven_Pro } from 'next/font/google'
 
 const appFont = Maven_Pro({ subsets: ['latin'] })

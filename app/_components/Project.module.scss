@@ -13,7 +13,6 @@
     // 'desc code-and-stack';
     display:flex ;
     flex-direction: column;
-    justify-content: space-between;
     padding:1%;
     margin:2%;
     width:95%;
@@ -29,6 +28,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin:0;
 }
 
 .project .example{
@@ -39,8 +39,12 @@
     aspect-ratio: 4/2;
 }
 
-.project .example img{
-    // width:100%;
+.techContainer{
+    position: relative;
+    width:100%;
+    max-width: 130px;
+    aspect-ratio: 1/1;
+
 }
 
 .project .title{
@@ -57,9 +61,10 @@
     grid-area: code-and-stack;
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
-.stack img{
-    width: 15%;
+.stack{
+    width: 50%;
 }
 
 .project .stack{
@@ -68,9 +73,10 @@
 }
 
 .button{
-    padding:2%;
+    padding:1%;
     margin:1%;
     text-decoration: none;
+    text-align: center;
     border-radius: 12px;
     border: 1.5px solid var(--textColor);
     background-color: transparent;

@@ -1,67 +1,98 @@
+
 .Header{
     // border-bottom: 1px solid black;
     display:flex;
     justify-content:space-around;
+    font-family: 'Cormorant', serif;
     align-items: center;
     scroll-behavior: smooth;
     max-width: 100%;
     padding:1%;
-
+    font-size: larger;
     width: 100%;
     position: fixed;
     top:0;
     backdrop-filter: blur(5px);
-    z-index: 9999;
+    z-index: 99;
     
-    
-    li{
-        padding:5% 10%;
-    }
-
-    li:hover{
-        backdrop-filter: blur(12px) saturate(200%);
-        -webkit-backdrop-filter: blur(12px) saturate(300%);
-        background-color: rgba(255, 255, 255, 0.198);
-        border-radius: 12px;
-        border: 1px solid rgba(209, 213, 219, 0.3);
+    .NavBar{
+        display: flex;
+        flex-direction: row;
         
 
-    }
+        .menuButton{
+            border:none;
+            color:var(--theme1);
+            display:none;
+            padding:10%;
+            
+            
+            svg{
+                fill:var(--textColor);
+            }
+        }
+
+        ul{
+            list-style-type: none;
+            display:flex;
+            grid-area: 'links';
+            width:auto;
+            width:60%;
+            
+        }
+
+        .About:hover a{
+            color:var(--theme4)
+        }
+        .Contact:hover a{
+            color:var(--theme4)
+        }
+        .Projects:hover a{
+            color:var(--theme1)
+        }
+        .Resume:hover a{
+            color:var(--theme2)
+        }
     
-    .About:hover a{
-        color:var(--theme4)
-    }
-    .Contact:hover a{
-        color:var(--theme4)
-    }
-    .Projects:hover a{
-        color:var(--theme1)
-    }
-    .Resume:hover a{
-        color:var(--theme2)
+        li:hover, .menuButton:hover{
+            backdrop-filter: blur(12px) saturate(200%);
+            -webkit-backdrop-filter: blur(12px) saturate(300%);
+            background-color: rgba(255, 255, 255, 0.198);
+            border-radius: 12px;
+            border: 1px solid rgba(209, 213, 219, 0.3);
+    
+        }
     }
 
-    
+
 
     a{
         text-decoration: none;
     }
 
-    ul{
-        list-style-type: none;
-        display:flex;
-        grid-area: 'links';
+    .logo{
+        grid-area: 'logo';
+        margin-right: 1rem;
+        cursor: pointer;
+    }
+
+
+}
+
+@media(max-width: 600px){
+
+    .Header{
+        .NavBar{
+            .menuButton{
+                display:block;
+            }
         
-        //gap:var(--gap);
-        // justify-content: flex-start;
-        // align-items: center;
+            ul{
+                display:none;
+            }
+        }
 
     }
 
 }
 
-.logo{
-    grid-area: 'logo';
-    margin-right: 1rem;
-    cursor: pointer;
-}
