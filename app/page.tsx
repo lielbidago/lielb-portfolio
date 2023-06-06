@@ -37,7 +37,7 @@ export default function Home() {
                       user-friendly websites and a drive to continuously learn.</span>
             </div>
             <div className={styles.techStack}>
-              {Object.keys(techStack).map((tch)=><img src={techStack[tch as techT].icon.src} alt={techStack[tch as techT].title} key={techStack[tch as techT].title} />)}
+              {Object.keys(techStack).map((tch)=><div className={styles.techContainer} key={techStack[tch as techT].title}><Image src={techStack[tch as techT].icon.src} alt={techStack[tch as techT].title}  fill/></div>)}
               
             </div>            
           </div>
@@ -45,7 +45,7 @@ export default function Home() {
       <div className={styles.projects}>
           <h1>Projects</h1>
           <div className={styles.container}>
-            {projects.slice(Math.min(0,projects.length,2)).map((p)=> <Project project={p}/>)}
+            {projects.slice(Math.min(0,projects.length,2)).map((p)=> <Project project={p} key={p.title}/>)}
           </div>
           <a href="/projects" className="for-more button">For More..</a>
       </div>
