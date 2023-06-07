@@ -4,24 +4,14 @@
 
 
 .project{
-    // display: grid;
-    // grid-template-columns: repeat(1fr, 2);
-    // grid-template-rows: 15% auto 20%;
-    // grid-template-areas: 
-    // 'img img'
-    // 'title title'
-    // 'desc code-and-stack';
     display:flex ;
     flex-direction: column;
-    padding:1%;
-    margin:2%;
+    padding:3%;
+    margin:3%;
     width:95%;
-    max-width: 70%;
-    backdrop-filter: blur(12px) saturate(200%);
-    -webkit-backdrop-filter: blur(12px) saturate(200%);
-    background-color: rgba(255, 255, 255, 0.34);
-    border-radius: 12px;
-    border: 1px solid rgba(209, 213, 219, 0.3);
+    height:80%;
+    max-width: 50%;
+    min-width: 300px;
 }
 
 .desc{
@@ -36,26 +26,36 @@
     position: relative;
     width:100%;
     max-width: 700px;
+    margin: auto;
     aspect-ratio: 4/2;
+}
+
+.example:hover{
+    transform: scale(1.01);
+    box-shadow:  0 4px 8px 0 rgba(255, 252, 252, 0.517), 0 6px 20px 0 rgba(249, 249, 249, 0.761);
+
 }
 
 .techContainer{
     position: relative;
     width:100%;
-    max-width: 130px;
+    max-width: 30px;
     aspect-ratio: 1/1;
+    margin: auto;
 
 }
 
 .project .title{
     grid-area: title;
     padding:0 10%;
-    font-size: 1.2em;
+    margin-top: 1%;
+    font-size: 150%;
 }
 
 .project .descp{
     grid-area: desc;
     padding:5%;
+    font-size: 130%;
 }
 .project .code_and_stack{
     grid-area: code-and-stack;
@@ -81,7 +81,7 @@
     border: 1.5px solid var(--textColor);
     background-color: transparent;
     span{
-        font-size: small;
+        font-size: 1rem;
         font-weight: lighter;
     }
 }

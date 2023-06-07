@@ -21,35 +21,41 @@
 
 html{
   width:100%;
+  scroll-behavior: smooth;
 
 }
 
 
 body{
-  /* background-image: linear-gradient(rgba(185, 185, 185, 0.25),rgba(53, 53, 53, 0.344)), url('../public/bg2.jpg');
+  // background-image: linear-gradient(rgba(185, 185, 185, 0.068),
+  // rgba(53, 53, 53, 0.344)), url('../public/colorbg.jpg');
+  background-color: var(--theme1);
+  background-image: url(/whitebg2.jpeg);
   background-size: cover;
-  background-position: center; */
-  background: var(--theme1);
-  background: 
-  radial-gradient(circle,  var(--theme1) 0%,
-  var(--theme2) 41%,
-  var(--theme3) 56%, var(--theme4) 72%, var(--theme5) 100%);
+  background-position: center; 
+  background-repeat: no-repeat;
+  // background: var(--theme1);
+  // background: 
+  // radial-gradient(circle,  var(--theme1) 0%,
+  // var(--theme2) 41%,
+  // var(--theme3) 56%, var(--theme4) 72%, var(--theme5) 100%);
   font-size: larger;
   width:100%;
+  scroll-behavior: smooth;
+
 }
 
-a{
-  color: var(--textColor)
-}
+// a{
+//   color: var(--textColor)
+// }
 
 p, span{
-  max-width: 70%;
   text-align: center;
   
 }
 
 button, .button{
-  padding:1%;
+  padding:2%;
   text-decoration: none;
   border-radius: 12px;
   border: 1.5px solid var(--textColor);
@@ -68,15 +74,24 @@ h1{
   font-weight: light;
 }
 
+.glass{
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8.8px);
+-webkit-backdrop-filter: blur(8.8px);
+border: 1px solid rgba(255, 255, 255, 0.33);
 
+}
 .links{
   width:20%;
 }
 
 
-@media (max-width:768px) {
+// @media (max-width:768px) {
   
-}
+// }
 
 /* .contact .form{
   backdrop-filter: blur(12px) saturate(200%);

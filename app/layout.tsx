@@ -1,8 +1,8 @@
 import Header from './_components/Header'
 import './globals.scss'
-import { Maven_Pro } from 'next/font/google'
+import { Cormorant } from 'next/font/google'
 
-const appFont = Maven_Pro({ subsets: ['latin'] })
+const appFont = Cormorant({ subsets: ['latin'] })
 
 export const metadata = {
   title: "liel's portfolio",

@@ -1,15 +1,18 @@
 .MenuList{
     li{
-        padding:5% 7%;
+        padding-inline:7%;
     }
 
     list-style-type: none;
     display:flex;
     
+    li:not(:last-child){
+        border-right: 1px white solid;
+    }
+    
     a{
         text-decoration: none;
     }
-
 
 
 }

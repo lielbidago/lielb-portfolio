@@ -1,49 +1,65 @@
 .main {
-  min-height: 100vh;
-  box-sizing: border-box;
-  width: 100%;
+  // min-height: 100vh;
+  // box-sizing: border-box;
+  // width: 100svw;
+  // max-width: 100%;
+  // min-width: 100svw;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .about, .contact, .projects, .intro{
-  height: 100svh;
+  height: 90svh;
+  width:100%;
   display:flex;
   margin-top: 6%;
   flex-direction: column;
   align-items: center;
   justify-items: center;
-
+  min-height: fit-content;  
   h1{
     font-family: 'Cormorant', serif;
-    font-size: 3em;
+    font-size: 3rem;
     padding:2%;
   }
 }
 
 .accent{
   color:var(--theme1);
-  font-weight:lighter;
-  font-family: 'Cormorant', serif;
+  // font-family: 'Cormorant', serif;
 }
 
 .intro {
   grid-area: intro;
   display: flex;
   align-items:center;
+  justify-content: center;
 }
 
 .introContent{
   display: flex;
-  margin:5%;
-  padding:3%;
+  padding: 7% 5% 0 5% ;
+  margin: 0 3%;
+  width:60%;
+  height: 50%;
+  height: fit-content;
+  width: fit-content;
+  font-family: 'Cormorant', serif;
+  .text span{
+    font-size: 3rem;
 
-  backdrop-filter: blur(12px) saturate(200%);
-  -webkit-backdrop-filter: blur(12px) saturate(200%);
-  background-color: rgba(255, 255, 255, 0.34);
-  border-radius: 12px;
-  border: 1px solid rgba(209, 213, 219, 0.3);
+    .accent{
+      font-size: 4rem;
+    }
+  }
+
+
+  // backdrop-filter: blur(12px) saturate(200%);
+  // -webkit-backdrop-filter: blur(12px) saturate(200%);
+  // background-color: rgba(255, 255, 255, 0.34);
+  // border-radius: 12px;
+  // border: 1px solid rgba(209, 213, 219, 0.3);
 
 }
 
@@ -54,6 +70,7 @@
 
 }
 .aboutContent{
+  padding:2%;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto auto auto;
@@ -68,16 +85,23 @@
   margin-bottom: 2%;
 }
 .about img{
-  grid-area: image;
-  width:90%;
-  justify-self: center;
+  border-radius: 8px;
 }
-.about span{
+
+.about .imageContainer{
+  width:90%;
+  
+  margin:2% auto;
+}
+.about .text p{
   grid-area: text;
   width: 100%;
+  font-size: 1.5rem;
+  height: 100%;
 }
 
 .imageContainer{
+  grid-area: image;
   position: relative;
   width:100%;
   max-width: 600px;
@@ -89,28 +113,31 @@
   width:70%
 }
 .text span{
-  font-size: 1.8em;
-  line-height: 0.9em;
+  font-size: 1.5rem;
+  // line-height: 0.9rem;
   
 }
 
 .techStack{
-  backdrop-filter: blur(12px) saturate(200%);
-  -webkit-backdrop-filter: blur(12px) saturate(200%);
-  background-color: rgba(255, 255, 255, 0.34);
-  border-radius: 12px;
-  border: 1px solid rgba(209, 213, 219, 0.3);
+  // backdrop-filter: blur(12px) saturate(200%);
+  // -webkit-backdrop-filter: blur(12px) saturate(200%);
+  // background-color: rgba(255, 255, 255, 0.34);
+  // border-radius: 12px;
+  // border: 1px solid rgba(209, 213, 219, 0.3);
+
   grid-area: tech;
   display: flex;
   align-self: center;
   justify-content: space-around;
   padding:1rem 3rem;
+  margin:2%;
 }
 .techStack .techContainer{
   position: relative;
   width:6%;
   aspect-ratio: 1/1;
   object-fit: contain;
+  min-width: 30px;
 }
 
 .projects{
@@ -123,7 +150,8 @@
 
 .projects .container{
   display: flex;
-  margin-inline: 3em;
+  width:70%;
+
 }
 .contact{
   display: flex;
@@ -139,22 +167,20 @@
 }
 
 .contactMain{
-  backdrop-filter: blur(12px) saturate(200%);
-  -webkit-backdrop-filter: blur(12px) saturate(200%);
-  background-color: rgba(255, 255, 255, 0.34);
-  border-radius: 12px;
-  border: 1px solid rgba(209, 213, 219, 0.3);
+  // backdrop-filter: blur(12px) saturate(200%);
+  // -webkit-backdrop-filter: blur(12px) saturate(200%);
+  // background-color: rgba(255, 255, 255, 0.34);
+  // border-radius: 12px;
+  // border: 1px solid rgba(209, 213, 219, 0.3);
   padding:7% 10%;
   width:60%;
    
 }
 
-.contactMain h1{
-  font-size: 800;
-}
+
 
 .contactMain p{
-  font-size: 1.2em;
+  font-size: 1.2rem;
   max-width: 100%;
 }
 
@@ -163,7 +189,7 @@
   
 }
 .contactMain .email{
-  font-size: 1.5em;
+  font-size: 1.5rem;
   padding:1%;
   border:2px solid white;
   border-radius: 12px;
@@ -172,16 +198,40 @@
   text-decoration: none;
 }
 
+.links, .email{
+  width: 70%;
+  text-align: center;
+  padding:2%;
+  margin:3%;
+}
+
 .or{
   margin-inline: 1%;
 }
-.contactMain svg{
-  width:70%;
-  margin:0;
-}
+
 
 .email:hover{
   color: var(--theme4);
   background-color: var(--textColor);
 }
 
+@media (max-width: 767px){
+  .introContent, .aboutContent, .projects .container, .linksSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projects{
+    height: fit-content;
+  }
+
+  .intro{
+    .text span{
+      line-height: 3rem;
+    }
+  }
+
+
+
+}

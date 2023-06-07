@@ -39,27 +39,20 @@
             width:auto;
             width:60%;
             
+            
         }
-
-        .About:hover a{
-            color:var(--theme4)
-        }
-        .Contact:hover a{
-            color:var(--theme4)
-        }
-        .Projects:hover a{
-            color:var(--theme1)
-        }
-        .Resume:hover a{
-            color:var(--theme2)
+        li{
+            padding:3% 10%;
         }
     
         li:hover, .menuButton:hover{
-            backdrop-filter: blur(12px) saturate(200%);
-            -webkit-backdrop-filter: blur(12px) saturate(300%);
-            background-color: rgba(255, 255, 255, 0.198);
-            border-radius: 12px;
-            border: 1px solid rgba(209, 213, 219, 0.3);
+            background: rgba(255, 255, 255, 0);
+            border-radius: 8px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(8.8px);
+            -webkit-backdrop-filter: blur(8.8px);
+            border: none;
+            
     
         }
     }
@@ -70,16 +63,18 @@
         text-decoration: none;
     }
 
+
     .logo{
         grid-area: 'logo';
         margin-right: 1rem;
+        font-size: 1.6rem;
         cursor: pointer;
     }
 
 
 }
 
-@media(max-width: 600px){
+@media(max-width: 1113px){
 
     .Header{
         .NavBar{
