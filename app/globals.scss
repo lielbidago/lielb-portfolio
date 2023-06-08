@@ -30,7 +30,8 @@ body{
   // background-image: linear-gradient(rgba(185, 185, 185, 0.068),
   // rgba(53, 53, 53, 0.344)), url('../public/colorbg.jpg');
   background-color: var(--theme1);
-  background-image: url(/whitebg2.jpeg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.068),
+  rgba(141, 141, 141, 0.344)), url(/whitebg2.jpeg);
   background-size: cover;
   background-position: center; 
   background-repeat: no-repeat;
@@ -45,21 +46,21 @@ body{
 
 }
 
-// a{
-//   color: var(--textColor)
-// }
-
 p, span{
   text-align: center;
   
 }
 
+.pageHeader{
+  font-weight: bold;
+}
 button, .button{
   padding:2%;
   text-decoration: none;
   border-radius: 12px;
   border: 1.5px solid var(--textColor);
   background-color: transparent;
+  font-weight:bold;
 }
 
 button:hover, .button:hover, .email:hover{

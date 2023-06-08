@@ -27,7 +27,6 @@
 
 .accent{
   color:var(--theme1);
-  // font-family: 'Cormorant', serif;
 }
 
 .intro {
@@ -54,13 +53,6 @@
     }
   }
 
-
-  // backdrop-filter: blur(12px) saturate(200%);
-  // -webkit-backdrop-filter: blur(12px) saturate(200%);
-  // background-color: rgba(255, 255, 255, 0.34);
-  // border-radius: 12px;
-  // border: 1px solid rgba(209, 213, 219, 0.3);
-
 }
 
 .about{ 
@@ -85,18 +77,23 @@
   margin-bottom: 2%;
 }
 .about img{
-  border-radius: 8px;
+  border-radius: 50%;
+}
+
+.liel{
+  margin:2%;
+  border: solid 1px white;
 }
 
 .about .imageContainer{
   width:90%;
-  
+  border-radius: 50%;
   margin:2% auto;
 }
 .about .text p{
   grid-area: text;
   width: 100%;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   height: 100%;
 }
 
@@ -119,12 +116,6 @@
 }
 
 .techStack{
-  // backdrop-filter: blur(12px) saturate(200%);
-  // -webkit-backdrop-filter: blur(12px) saturate(200%);
-  // background-color: rgba(255, 255, 255, 0.34);
-  // border-radius: 12px;
-  // border: 1px solid rgba(209, 213, 219, 0.3);
-
   grid-area: tech;
   display: flex;
   align-self: center;
@@ -134,10 +125,11 @@
 }
 .techStack .techContainer{
   position: relative;
-  width:6%;
+  width:5%;
   aspect-ratio: 1/1;
   object-fit: contain;
   min-width: 30px;
+  margin: auto;
 }
 
 .projects{
@@ -164,15 +156,10 @@
   display:flex;
   align-items: center;
   padding:5%;
-  /* width:160%; */
+
 }
 
 .contactMain{
-  // backdrop-filter: blur(12px) saturate(200%);
-  // -webkit-backdrop-filter: blur(12px) saturate(200%);
-  // background-color: rgba(255, 255, 255, 0.34);
-  // border-radius: 12px;
-  // border: 1px solid rgba(209, 213, 219, 0.3);
   padding:7% 10%;
   width:60%;
    
