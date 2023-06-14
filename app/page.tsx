@@ -40,7 +40,9 @@ export default function Home() {
               </p>
             </div>
             <div className={styles.techStack+' glass'}>
-              {Object.keys(techStack).map((tch)=><div className={styles.techContainer} key={techStack[tch as techT].title}><Image src={techStack[tch as techT].icon.src} alt={techStack[tch as techT].title}  fill/></div>)}
+              <div className={styles.track}>
+                {Object.keys(techStack).map((tch)=><div className={styles.techContainer} key={techStack[tch as techT].title}><Image src={techStack[tch as techT].icon.src} alt={techStack[tch as techT].title}  fill/></div>)}
+              </div>
               
             </div>            
           </div>

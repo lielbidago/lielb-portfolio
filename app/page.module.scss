@@ -132,19 +132,42 @@
   display: flex;
   align-self: center;
   justify-content: space-around;
-  padding:1rem 4rem;
-  margin:1%;
+  padding:1rem 0;
+  margin:1% auto ;
+  width:100%;
 
 }
+$animationSpeed: 10s;
+
+.techStack{
+
+  display: flex;
+	overflow:hidden;
+
+}
+
 .techStack .techContainer{
   position: relative;
   width:5%;
   aspect-ratio: 1/1;
   object-fit: contain;
   min-width: 30px;
-  margin: auto;
+  margin:2% 5%;
+  transition: 0.9s;
 
 }
+.track{
+  width:70%;
+  display: flex;
+  animation: scroll $animationSpeed linear infinite;
+  position: relative;
+}
+@keyframes scroll {
+	0% { transform: translateX(0%) 
+  }
+	100% { transform: translateX(-60%)}
+}
+
 
 .techStack .techContainer img:hover{
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.247);
