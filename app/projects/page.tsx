@@ -4,7 +4,7 @@ import styles from './page.module.scss';
 
 export default function Projects(){
     return (
-        <main>
+        <main className={styles.mainContainer}>
             <h1 className={styles.title+' pageHeader'}>My Projects</h1>
             <div className={styles.projectsMain}>
                {projects.map((p, index)=> <Project project={p} key={index}/>)} 

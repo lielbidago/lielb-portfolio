@@ -1,19 +1,30 @@
-.main{
+.mainContainer{
     display: flex;
     align-items: center;
-    
+    flex-direction: column;
+    width:100%;
+
+
     
 }
 
 .projectsMain{
-    margin: 0 6em 6em 6em;
+    // margin: 0 5em 6em 5em;
     display:flex;
     flex-direction: row;
     align-items: center;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .title{
     margin-top: 5%;
     font-size: 180%;
+}
+
+@media(max-width: 600px){
+    .title{
+        margin-top: 15%;
+    }
 }
 

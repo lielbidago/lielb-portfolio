@@ -179,7 +179,7 @@
 .contactMain .email{
   font-size: 1.5rem;
   padding:1%;
-  border:2px solid white;
+  border:2px solid var(--buttonColor);
   border-radius: 12px;
   margin-left: 7%;
   font-weight: bold;
@@ -203,6 +203,13 @@
   background-color: var(--textColor);
 }
 
+.button{
+  border: solid 1px var(--buttonColor);
+  padding: 1.6rem;
+  border-radius:  12px;
+  text-decoration: none;
+}
+
 @media (max-width: 767px){
   .introContent, .aboutContent, .projects .container, .linksSection{
     display: flex;
@@ -212,14 +219,32 @@
 
   .projects{
     height: fit-content;
+    margin-top: 15%;
+
+    .button{
+      margin-top: 10%;
+    }
+
   }
 
   .intro{
     .text span{
       line-height: 3rem;
     }
+
+    .text{
+      width: 90%;
+      text-align: center;
+    }
+
+    .introContent{
+      margin: 5%;
+    }
   }
 
+  .linksSection{
+    padding: 6%;
+  }
 
 
 }

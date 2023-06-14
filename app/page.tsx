@@ -50,7 +50,7 @@ export default function Home() {
           <div className={styles.container}>
             {projects.slice(Math.min(0,projects.length,2)).map((p)=> <Project project={p} key={p.title}/>)}
           </div>
-          <a href="/projects" className="for-more button">For More..</a>
+          <a href="/projects" className={styles.button}>For More..</a>
       </div>
       <div className={styles.contact} id='contact'>
       <h1 className='pageHeader'>Contact me</h1>
