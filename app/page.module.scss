@@ -176,20 +176,11 @@
   width:100%;
 }
 
-.linksSection{
-  display:flex;
-  align-items: center;
-  padding:5%;
-
-}
-
 .contactContent{
-  padding:7% 10%;
+  padding:2% 5% 2% 5%;
   width:60%;
    
 }
-
-
 
 .contactContent p{
   font-size: 1.2rem;
@@ -211,12 +202,14 @@
 }
 
 .links, .email{
-  width: 70%;
+  width: 50%;
   text-align: center;
   padding:2%;
   margin:3%;
 }
-
+.links{
+  width: 25%;
+}
 .or{
   margin-inline: 1%;
 }
@@ -236,6 +229,7 @@
 
 .links svg{
   border-radius: 50%;
+
 }
 
 .links svg:hover{
@@ -243,9 +237,38 @@
   background: white;
 }
 
+.linksSection{
+  div{
+    padding: 4%;
+    margin: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  display: grid;
+  grid-template-areas: 'links links'
+  'email resume';
+
+  .linksDiv{
+    grid-area: links;
+    display: flex;
+    align-items: center;
+
+  }
+
+  .emailLink{
+    grid-area: email;
+  }
+
+  .resumeLink{
+    grid-area: resume;
+  }
+}
+
 @media (max-width: 767px){
   .introContent, .aboutContent,
-   .projects .container, .linksSection{
+   .projects .container, .linksSection, .linksDiv{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -277,7 +300,15 @@
   }
 
   .linksSection{
-    padding: 6%;
+    padding: 5%;
+    .resumeLink a{
+      min-width: fit-content;
+    }
+
+  }
+
+  .contactContent{
+    width: 90%;
   }
 
   .about .text p{

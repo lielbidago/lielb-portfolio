@@ -55,14 +55,28 @@ export default function Home() {
           </div>
       </div>
       <div className={styles.contact} id='contact'>
-      <h1 className='pageHeader'>Contact me</h1>
+      
         <div className={styles.contactContent+' glass'}>
+        <h1 className='pageHeader'>Contact</h1>
           <div className={styles.linksSection+' glass'}>
-            <p>contact me at:</p>
-            <a href="https://github.com/lielbidago" className={styles.links} target='_blank'><GithubSVG/></a><span className={styles.or}>or</span> 
-            <a href="https://www.linkedin.com/in/liel-bidago/" className={styles.links} target='_blank'><LinkedinSVG/></a>
-            <p>or email me  </p>
-            <a href="mailto:lielbidago@gmail.com" className={styles.email+' button' } >here</a> 
+
+            <div className={styles.linksDiv+' glass'}>
+              <p>contact me at:</p>
+              <a href="https://github.com/lielbidago" className={styles.links} target='_blank'><GithubSVG/></a><span className={styles.or}>or</span> 
+              <a href="https://www.linkedin.com/in/liel-bidago/" className={styles.links} target='_blank'><LinkedinSVG/></a>              
+            </div>
+            <div className={styles.emailLink+' glass'}>
+              <p>email me  </p>
+              <a href="mailto:lielbidago@gmail.com" className={styles.email+' button' } >here</a> 
+            </div>
+            <div className={styles.resumeLink+' glass'}>
+              <p>get my</p>
+              <a className={styles.email+' button' } href={'resume.pdf'} download={'LielBidago_Resume.pdf'}>resume</a>
+            </div>
+            
+
+
+
           </div>
           
         </div>    
