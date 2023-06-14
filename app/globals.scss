@@ -28,15 +28,12 @@ html{
 
 
 body{
-  // background-image: linear-gradient(rgba(185, 185, 185, 0.068),
-  // rgba(53, 53, 53, 0.344)), url('../public/colorbg.jpg');
   background-color: var(--theme5);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.068),
-  rgba(141, 141, 141, 0.344)), url(/whitebg2.jpeg);
+  background-image: url(/whitebg2.jpeg);
   background-size: cover;
   background-position: center; 
   background-repeat: no-repeat;
-  // background: var(--theme1);
+
   // background: 
   // radial-gradient(circle,  var(--theme1) 0%,
   // var(--theme2) 41%,
@@ -54,7 +51,7 @@ p, span{
 
 .pageHeader{
   font-weight: bold;
-  letter-spacing: 1.1rem;
+  letter-spacing: -0.2rem;
 }
 button, .button{
   padding:2%;

@@ -14,8 +14,8 @@
   width:100%;
   padding:5%;
   display:flex;
-  
-  margin: 6%;
+
+  // margin: 6%;
   flex-direction: column;
   align-items: center;
   justify-items: center;
@@ -29,6 +29,7 @@
 }
 
 .aboutContent, .introContent, .projectsContent, .contactContent{
+  min-width: fit-content;  
   background: rgb(217,217,217);
   background: radial-gradient(circle, rgb(205, 193, 159, 0.4) 26%, rgba(229, 229, 229, 0) 100%);
 }
@@ -61,7 +62,8 @@
   height: 50%;
   height: fit-content;
   width: fit-content;
-  font-family: 'Cormorant', serif;
+
+
   .text span{
     font-size: 3rem;
 
@@ -91,7 +93,6 @@
   'tech tech';
 
 }
-
 .about h1{
   grid-area: title;
 
@@ -114,19 +115,16 @@
 }
 .about .text p{
   grid-area: text;
-  margin:2%;
   width: 100%;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
+  line-height: 2.3rem;
   height: 100%;
 }
 
 .text{
-  width:70%
+  width: 80%;
 }
-.text span{
-  font-size: 1.5rem;
-  
-}
+
 
 .techStack{
   grid-area: tech;
@@ -280,6 +278,10 @@
 
   .linksSection{
     padding: 6%;
+  }
+
+  .about .text p{
+    font-size: 2rem;
   }
 
 
