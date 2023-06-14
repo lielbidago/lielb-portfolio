@@ -61,7 +61,9 @@ button, .button{
   background-color: transparent;
   font-weight:bold;
 }
-
+button, .button, .email{
+  transition: 0.4s;
+}
 button:hover, .button:hover, .email:hover{
   img{
     filter: invert(10%) sepia(26%) saturate(291%) hue-rotate(5deg) brightness(88%) contrast(83%);
