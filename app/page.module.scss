@@ -10,14 +10,17 @@
 }
 
 .about, .contact, .projects, .intro{
-  height: 90svh;
+  height: 100svh;
   width:100%;
+  padding:5%;
   display:flex;
-  margin-top: 6%;
+  
+  margin: 6%;
   flex-direction: column;
   align-items: center;
   justify-items: center;
   min-height: fit-content;  
+
   h1{
     font-family: 'Cormorant', serif;
     font-size: 3rem;
@@ -25,8 +28,22 @@
   }
 }
 
+.aboutContent, .introContent, .projectsContent, .contactContent{
+  background: rgb(217,217,217);
+  background: radial-gradient(circle, rgb(205, 193, 159, 0.4) 26%, rgba(229, 229, 229, 0) 100%);
+}
+
 .accent{
   color:var(--theme1);
+}
+
+.imageContainer{
+  grid-area: image;
+  position: relative;
+  width:100%;
+  max-width: 600px;
+  aspect-ratio: 3/2;
+
 }
 
 .intro {
@@ -52,7 +69,6 @@
       font-size: 4rem;
     }
   }
-
 }
 
 .about{ 
@@ -60,9 +76,12 @@
   display: flex;
   align-items:center;
 
+
 }
 .aboutContent{
-  padding:2%;
+  padding:1%;
+  width:80%;
+  min-height: fit-content;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto auto auto;
@@ -70,11 +89,12 @@
   'title title'
   'image text'
   'tech tech';
+
 }
 
 .about h1{
   grid-area: title;
-  margin-bottom: 2%;
+
 }
 .about img{
   border-radius: 50%;
@@ -85,25 +105,19 @@
   border: solid 1px white;
 }
 
-.about .imageContainer{
-  width:90%;
+.aboutContent .imageContainer{
+  width:70%;
+  min-width: fit-content;
   border-radius: 50%;
   margin:2% auto;
+
 }
 .about .text p{
   grid-area: text;
+  margin:2%;
   width: 100%;
   font-size: 1.8rem;
   height: 100%;
-}
-
-.imageContainer{
-  grid-area: image;
-  position: relative;
-  width:100%;
-  max-width: 600px;
-  aspect-ratio: 3/2;
-
 }
 
 .text{
@@ -111,7 +125,6 @@
 }
 .text span{
   font-size: 1.5rem;
-  // line-height: 0.9rem;
   
 }
 
@@ -120,8 +133,9 @@
   display: flex;
   align-self: center;
   justify-content: space-around;
-  padding:1rem 3rem;
-  margin:2%;
+  padding:1rem 4rem;
+  margin:1%;
+
 }
 .techStack .techContainer{
   position: relative;
@@ -130,19 +144,31 @@
   object-fit: contain;
   min-width: 30px;
   margin: auto;
+
+}
+
+.techStack .techContainer img:hover{
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.163);
+
+
 }
 
 .projects{
   grid-area: projects;
-  
+  height:auto;
 }
-.projects > h1{
-  margin-bottom: 2%;
+
+.projectsContent{
+  width:80%;
+  display: flex;
+  height:fit-content;
+  flex-direction: column;
+  align-items: center;
+  padding:2%;
 }
 
 .projects .container{
   display: flex;
-  width:70%;
 
 }
 .contact{
@@ -159,7 +185,7 @@
 
 }
 
-.contactMain{
+.contactContent{
   padding:7% 10%;
   width:60%;
    
@@ -167,16 +193,16 @@
 
 
 
-.contactMain p{
+.contactContent p{
   font-size: 1.2rem;
   max-width: 100%;
 }
 
-.contactMain a{
+.contactContent a{
   padding-left: 4%;
   
 }
-.contactMain .email{
+.contactContent .email{
   font-size: 1.5rem;
   padding:1%;
   border:2px solid var(--buttonColor);
@@ -199,8 +225,8 @@
 
 
 .email:hover{
-  color: var(--theme4);
-  background-color: var(--textColor);
+  color: var(--theme1);
+  background: white;
 }
 
 .button{
@@ -210,8 +236,18 @@
   text-decoration: none;
 }
 
+.links svg{
+  border-radius: 50%;
+}
+
+.links svg:hover{
+  fill: var(--theme1);
+  background: white;
+}
+
 @media (max-width: 767px){
-  .introContent, .aboutContent, .projects .container, .linksSection{
+  .introContent, .aboutContent,
+   .projects .container, .linksSection{
     display: flex;
     flex-direction: column;
     align-items: center;

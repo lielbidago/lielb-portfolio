@@ -3,11 +3,11 @@
 :root{
   --textColor: rgb(247, 247, 247);
   --hoverColor:rgba(255, 255, 255, 0.85);
-  --theme1: rgb(205, 193, 159);
+  --theme1: #cdc09d;
   --theme2: rgb(214, 168, 103);
   --theme3:rgb(215, 193, 167);
   --theme4:rgb(146, 199, 181);
-  --theme5:rgb(217, 217, 217);
+  --theme5:#d9d9d9;
   --buttonColor: white;
   font-family: 'Maven Pro', sans-serif;
 }
@@ -17,12 +17,11 @@
   padding:0;
   box-sizing: border-box;
   color:white;
-  /* border: 2px solid black; */
+  // border: 2px solid black;
 }
 
 html{
   width:100%;
-  height:fit-content;
   scroll-behavior: smooth;
 
 }
@@ -44,7 +43,6 @@ body{
   // var(--theme3) 56%, var(--theme4) 72%, var(--theme5) 100%);
   font-size: larger;
   width:100%;
-  min-height:100%;
   scroll-behavior: smooth;
 
 }
@@ -56,6 +54,7 @@ p, span{
 
 .pageHeader{
   font-weight: bold;
+  letter-spacing: 1.1rem;
 }
 button, .button{
   padding:2%;
@@ -67,8 +66,12 @@ button, .button{
 }
 
 button:hover, .button:hover, .email:hover{
-  color: var(--theme4);
-  background-color: var(--textColor);
+  img{
+    filter: invert(10%) sepia(26%) saturate(291%) hue-rotate(5deg) brightness(88%) contrast(83%);
+  } 
+  
+  color: var(--theme1);
+  background: white;
 }
 
 h1{
@@ -86,6 +89,7 @@ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(8.8px);
 -webkit-backdrop-filter: blur(8.8px);
 border: 1px solid rgba(255, 255, 255, 0.33);
+
 
 }
 .links{

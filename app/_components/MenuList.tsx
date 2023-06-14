@@ -1,10 +1,5 @@
 import styles from './MenuList.module.scss';
 
-// interface MenuListProps{
-//     toggleShowMenu():void
-// }{toggleShowMenu}:MenuListProps
-
-
 export default function MenuList(){
     
 
@@ -16,7 +11,7 @@ export default function MenuList(){
             </li>
 
             <li className={styles.Projects}>
-                <a href='projects'>PROJECTS</a>
+                <a href='/#projects'>PROJECTS</a>
             </li>
 
             <li className={styles.Contact}>

@@ -45,22 +45,24 @@ export default function Home() {
             </div>            
           </div>
       </div>
-      <div className={styles.projects}>
-          <h1 className='pageHeader'>Projects</h1>
-          <div className={styles.container}>
-            {projects.slice(Math.min(0,projects.length,2)).map((p)=> <Project project={p} key={p.title}/>)}
+      <div className={styles.projects} id='projects'>
+        <div className={styles.projectsContent+' glass'}>
+            <h1 className='pageHeader'>Projects</h1>
+            <div className={styles.container}>
+              {projects.slice(Math.min(0,projects.length,2)).map((p)=> <Project project={p} key={p.title}/>)}
+            </div>
+            <a href="/projects" className={styles.button+' button'}>For More..</a>
           </div>
-          <a href="/projects" className={styles.button}>For More..</a>
       </div>
       <div className={styles.contact} id='contact'>
       <h1 className='pageHeader'>Contact me</h1>
-        <div className={styles.contactMain+' glass'}>
+        <div className={styles.contactContent+' glass'}>
           <div className={styles.linksSection+' glass'}>
             <p>contact me at:</p>
             <a href="https://github.com/lielbidago" className={styles.links} target='_blank'><GithubSVG/></a><span className={styles.or}>or</span> 
             <a href="https://www.linkedin.com/in/liel-bidago/" className={styles.links} target='_blank'><LinkedinSVG/></a>
             <p>or email me  </p>
-            <a href="mailto:lielbidago@gmail.com" className={styles.email} >here</a> 
+            <a href="mailto:lielbidago@gmail.com" className={styles.email+' button' } >here</a> 
           </div>
           
         </div>    
