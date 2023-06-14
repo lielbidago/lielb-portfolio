@@ -146,8 +146,8 @@
 }
 
 .techStack .techContainer img:hover{
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.163);
-
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.247);
+  transition: 0.4s;
 
 }
 
@@ -214,10 +214,13 @@
   margin-inline: 1%;
 }
 
-
+.email{
+  transition: 0.4s;
+}
 .email:hover{
   color: var(--theme1);
   background: white;
+  transition: 0.4s;
 }
 
 .button{
@@ -229,12 +232,13 @@
 
 .links svg{
   border-radius: 50%;
-
+  transition: 0.4s;
 }
 
 .links svg:hover{
   fill: var(--theme1);
   background: white;
+  transition: 0.5s;
 }
 
 .linksSection{
