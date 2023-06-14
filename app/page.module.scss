@@ -340,10 +340,11 @@ $animationSpeed: 10s;
 
   .linksSection{
     padding: 5%;
-    .resumeLink a{
-      min-width: fit-content;
+    .resumeLink a, .emailLink a{
+      min-width: max-content;
+      padding: 5%;
     }
-
+    
   }
 
   .contactContent{
