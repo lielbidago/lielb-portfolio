@@ -7,19 +7,19 @@ export default function MenuList(){
         <ul className={styles.MenuList}>
             
             <li className={styles.About}>
-                <a href='/#about'>ABOUT</a>
+                <a href='/#about' aria-label='about section link'>ABOUT</a>
             </li>
 
             <li className={styles.Projects}>
-                <a href='/#projects'>PROJECTS</a>
+                <a href='/#projects' aria-label='projects section link'>PROJECTS</a>
             </li>
 
             <li className={styles.Contact}>
-                <a href='/#contact'>CONTACT</a>
+                <a href='/#contact' aria-label='contact section link'>CONTACT</a>
             </li>   
 
             <li className={styles.Resume}>
-                <a href={'resume.pdf'} download={'LielBidago_Resume.pdf'}>RESUME</a>
+                <a href={'resume.pdf'} aria-label='resume download link' download={'LielBidago_Resume.pdf'}>RESUME</a>
             </li>   
                             
         </ul>)

@@ -6,19 +6,29 @@ import Menu from './Menu';
 
 
 export default function Header(){
-    const [showMenu, setShowMenu] = useState(false)
-    const toggleShowMenu = () => {setShowMenu(!showMenu)}
+    const [showMenu, setShowMenu] = useState(false);
+    const toggleShowMenu = () => {setShowMenu(!showMenu)};
+    const [theme, setTheme] = useState(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)')? 'dark':'light');
 
     return (
         <>        
-            <header className={styles.Header+' glass'}>
+            <header className={styles.Header+` `+theme}>
                 <div className={styles.logo}>
-                <a href='/'><h1>Lielb.</h1></a> 
+                <a href='/' aria-label='home page link'><h1>Lielb.</h1></a> 
+                </div>
+                <div className={styles.theme} >
+                    {/* {theme=='light'?<span>dark</span>:<span>light</span>} */}
+                    <div className={styles.toggle}>
+                        <label className={styles.switch} >
+                            <input type="checkbox" onClick={()=>{setTheme(theme=='light'?'dark':'light')}}/>
+                            <span className={styles.slider}></span>
+                        </label>
+                    </div>
                 </div>
 
                 <nav className={styles.NavBar}>
 
-                    {!showMenu && <button className={styles.menuButton} onClick={()=>{toggleShowMenu()}}>
+                    {!showMenu && <button className={styles.menuButton} aria-label='menu button' onClick={()=>{toggleShowMenu()}}>
                         <svg width="28" height="17" xmlns="http://www.w3.org/2000/svg"><g fillRule="evenodd"><path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z"/><path d="M0 0h40v3H0z"/></g></svg>
                     </button>}
                     <MenuList />

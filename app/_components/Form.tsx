@@ -47,7 +47,7 @@ export default function Contactform(){
             <label htmlFor="message">Message:</label>
             <textarea id='message' rows={6} placeholder='hi:)' required minLength={2} maxLength={500}/>
         </div>
-        <button type='submit'>Send</button>
+        <button aria-label='submit button' type='submit'>Send</button>
         
         </form> 
     </div>           

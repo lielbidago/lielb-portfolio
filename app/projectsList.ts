@@ -1,16 +1,16 @@
 import { StaticImageData } from "next/image"
-import html5 from '../public/html5.png';
-import react from '../public/react.png';
-import js from '../public/javascript.png';
-import ts from '../public/typescript.png';
-import sass from '../public/sass.png';
-import bootstrap from '../public/bootstrap.png';
-import PomodoTodo from '../public/pomodotodo.png';
-import wordle from '../public/wordle.png';
-import python from '../public/python.png';
-import express from '../public/express.png';
-import sql from '../public/sql.png';
-import node from '../public/node.png';
+import html5 from '../public/html5.webp';
+import react from '../public/react.webp';
+import js from '../public/javascript.webp';
+import ts from '../public/typescript.webp';
+import sass from '../public/sass.webp';
+import bootstrap from '../public/bootstrap.webp';
+import PomodoTodo from '../public/pomodotodo.webp';
+import wordle from '../public/wordle.webp';
+import python from '../public/python.webp';
+import express from '../public/express.webp';
+import sql from '../public/sql.webp';
+import node from '../public/node.webp';
 
 export interface Iproject{
     title:string,
