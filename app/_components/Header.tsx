@@ -3,6 +3,7 @@ import styles from './Header.module.scss';
 import MenuList from './MenuList';
 import { useState } from 'react';
 import Menu from './Menu';
+import ThemeToggle from './ThemeToggle';
 
 
 export default function Header(){
@@ -14,17 +15,9 @@ export default function Header(){
         <>        
             <header className={styles.Header+` `+theme}>
                 <div className={styles.logo}>
-                <a href='/' aria-label='home page link'><h1>Lielb.</h1></a> 
+                    <a href='/' aria-label='home page link'><h1>Lielb.</h1></a> 
                 </div>
-                <div className={styles.theme} >
-                    {/* {theme=='light'?<span>dark</span>:<span>light</span>} */}
-                    <div className={styles.toggle}>
-                        <label className={styles.switch} >
-                            <input type="checkbox" onClick={()=>{setTheme(theme=='light'?'dark':'light')}}/>
-                            <span className={styles.slider}></span>
-                        </label>
-                    </div>
-                </div>
+                <ThemeToggle theme={theme} setTheme={setTheme}/>
 
                 <nav className={styles.NavBar}>
 
@@ -35,7 +28,7 @@ export default function Header(){
                 </nav>
                 
             </header>
-            {showMenu && <Menu toggleShowMenu={toggleShowMenu}/>}
+            {showMenu && <Menu toggleShowMenu={toggleShowMenu} theme={theme} setTheme={setTheme}/>}
         </>
 
         
