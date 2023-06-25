@@ -8,7 +8,7 @@ import Menu from './Menu';
 export default function Header(){
     const [showMenu, setShowMenu] = useState(false);
     const toggleShowMenu = () => {setShowMenu(!showMenu)};
-    const [theme, setTheme] = useState(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)')? 'dark':'light');
+    const [theme, setTheme] = useState('light');
 
     return (
         <>        
