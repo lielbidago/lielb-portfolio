@@ -21,7 +21,7 @@ export default function Home() {
               <span>Hi! <span className={styles.accent}>Im liel, </span>A junior <span className={styles.accent}>web developer!</span> <br/></span>
               </div>
             <div className={styles.imageContainer}>
-              <Image src={image.src} alt='image-of-liel-1' priority sizes='(max-width: 768px) 100vw, 33vw' fill/>
+              <Image src={image.src} placeholder="blur" blurDataURL={image.src} alt='image-of-liel-1' priority sizes='(max-width: 768px) 100vw, 33vw' fill/>
             </div>
         </div>
       </div>
@@ -30,7 +30,7 @@ export default function Home() {
             <h1 className='pageHeader'>About Me</h1>
               
               <div className={styles.imageContainer+' glass'}>
-                <Image src={image2.src} alt='image-of-liel-2' style={{objectFit:'cover'}} sizes='(max-width: 768px) 100vw, 33vw' className={styles.liel} fill/>
+                <Image src={image2.src} alt='image-of-liel-2' placeholder="blur" blurDataURL={image2.src}  style={{objectFit:'cover'}} sizes='(max-width: 768px) 100vw, 33vw' className={styles.liel} fill/>
               </div>
               
             <div className={styles.text}>
@@ -39,10 +39,12 @@ export default function Home() {
               </p>
             </div>
             <div className={styles.techStack+' glass'}>
-              <div className={styles.track}>
-                {Object.keys(techStack).map((tch)=><div className={styles.techContainer} key={techStack[tch as techT].title}><Image src={techStack[tch as techT].icon.src} alt={techStack[tch as techT].title} sizes='(max-width: 768px) 100%, 33%' fill/></div>)}
-              </div>
-              
+                <div className={styles.track}>
+                {Object.keys(techStack).map((tch)=><div className={styles.techContainer} key={techStack[tch as techT].title}><Image src={techStack[tch as techT].icon.src} placeholder="blur" blurDataURL={techStack[tch as techT].icon.src} alt={techStack[tch as techT].title} sizes='(max-width: 768px) 100%, 33%' fill/></div>)}
+
+                  {Object.keys(techStack).map((tch)=><div className={styles.techContainer} key={techStack[tch as techT].title}><Image src={techStack[tch as techT].icon.src} placeholder="blur" blurDataURL={techStack[tch as techT].icon.src} alt={techStack[tch as techT].title} sizes='(max-width: 768px) 100%, 33%' fill/></div>)}
+                </div>
+
             </div>            
           </div>
       </div>

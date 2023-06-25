@@ -11,6 +11,7 @@ import python from '../public/python.webp';
 import express from '../public/express.webp';
 import sql from '../public/sql.webp';
 import node from '../public/node.webp';
+import git from '../public/git.webp';
 
 export interface Iproject{
     title:string,
@@ -28,16 +29,19 @@ export interface Itech{
   icon:StaticImageData
 }
 
-export const techStack = {react:{title:'React', icon:react}, 
-bootstrap:{title:'Bootstrap',icon:bootstrap},
-html:{title:'HTML5', icon:html5},
-js:{title:'JavaScript', icon:js},
-ts:{title:'TypeScript', icon:ts},
-sass:{title:'Sass', icon:sass},
-node:{title:'NodeJs', icon:node},
-python:{title:'Python', icon:python},
-express:{title:'Express', icon:express},
-sql:{title:'SQL', icon:sql}}
+export const techStack = {
+  react:{title:'React', icon:react}, 
+  bootstrap:{title:'Bootstrap',icon:bootstrap},
+  html:{title:'HTML5', icon:html5},
+  js:{title:'JavaScript', icon:js},
+  ts:{title:'TypeScript', icon:ts},
+  sass:{title:'Sass', icon:sass},
+  node:{title:'NodeJs', icon:node},
+  python:{title:'Python', icon:python},
+  express:{title:'Express', icon:express},
+  sql:{title:'SQL', icon:sql},
+  git:{title:'git',icon:git}
+}
   
 export const projects:Iproject[] = [
     {title:'PomodoTodo', 

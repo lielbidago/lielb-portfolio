@@ -1,7 +1,10 @@
+
+
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  --tecklistLen: 11;
 
 }
 
@@ -144,25 +147,20 @@
 .techStack{
   grid-area: tech;
   display: flex;
-  align-self: center;
-  justify-content: space-around;
+  // align-self: center;
+  // justify-content: space-around;
   padding: 1% 0;
   margin:2% auto ;
   width:80%;
 
-}
-$animationSpeed: 10s;
-
-.techStack{
-
-  display: flex;
-	overflow:hidden;
+  overflow:hidden;
 
 }
+$animationSpeed: 18s;
 
 .techStack .techContainer{
   position: relative;
-  width:5%;
+  width:0.5rem;
   aspect-ratio: 1/1;
   object-fit: cover;
   min-width: 30px;
@@ -171,15 +169,18 @@ $animationSpeed: 10s;
 
 }
 .track{
-  width:70%;
   display: flex;
-  animation: scroll $animationSpeed linear infinite;
-  position: relative;
+  align-self: center;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  // flex-direction: row;
+  animation:$animationSpeed scroll infinite linear ;
 }
+
 @keyframes scroll {
-	0% { transform: translateX(0%) 
+	from { transform: translateX(0%) 
   }
-	100% { transform: translateX(-60%)}
+	to { transform: translateX(-100%)}
 }
 
 
