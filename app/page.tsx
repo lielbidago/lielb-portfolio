@@ -63,7 +63,8 @@ export default function Home() {
 
             <div className={styles.linksDiv+' glass'}>
               <p>contact me at:</p>
-              <a href="https://github.com/lielbidago" className={styles.links} aria-label='github link' target='_blank'><GithubSVG/></a><span className={styles.or}>or</span> 
+              <a href="https://github.com/lielbidago" className={styles.links} aria-label='github link' target='_blank'><GithubSVG/></a>
+              <span className={styles.or}>or</span> 
               <a href="https://www.linkedin.com/in/liel-bidago/" className={styles.links} aria-label='linkedin link' target='_blank'><LinkedinSVG/></a>              
             </div>
             <div className={styles.emailLink+' glass'}>

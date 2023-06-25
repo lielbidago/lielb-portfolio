@@ -365,12 +365,40 @@ $animationSpeed: 10s;
   }
 
   .linksSection{
-    padding: 5%;
+    padding: 7%;
+    align-items: stretch;
+
     .resumeLink a, .emailLink a{
       min-width: max-content;
-      padding: 5%;
+      padding: 2%;
     }
-    
+    .resumeLink,.emailLink{
+      padding:3%;
+    }
+    .linksDiv{
+      padding:5%;
+      display:grid;
+      line-height: 1.8rem;
+      align-items: start;
+      grid-template-areas: 
+      "text text text"
+      "github or linkedin";
+
+      p{
+        grid-area: text;
+      }
+
+      span{
+        grid-area: or;
+        margin: 0;
+      }
+
+      .links{
+        width: 100%;
+      }
+
+
+    }
   }
 
   .contactContent{
