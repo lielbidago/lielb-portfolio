@@ -29,18 +29,18 @@ export default function Home() {
         <div className={styles.aboutContent+' glass'}>
             <h1 className='pageHeader'>About Me</h1>
               
-              <div className={styles.imageContainer+' glass'}>
-                <Image src={image2.src} alt='image-of-liel-2' placeholder="blur" blurDataURL={image2.src}  style={{objectFit:'cover'}} sizes='(max-width: 768px) 100vw, 33vw' className={styles.liel} fill/>
-              </div>
+            <div className={styles.imageContainer+' glass'}>
+              <Image src={image2.src} alt='image-of-liel-2' placeholder="blur" blurDataURL={image2.src}  style={{objectFit:'cover'}} sizes='(max-width: 768px) 100vw, 33vw' className={styles.liel} fill/>
+            </div>
               
             <div className={styles.text}>
-              <p>Possessing a passion for creating clean, efficient code, dynamic and
-                      user-friendly websites and a drive to continuously learn.
+              <p>Possessing a <span className={styles.accent}>passion</span>  for creating <span className={styles.accent}>clean, efficient code, </span>dynamic and
+                      user-friendly websites and <span className={styles.accent}>a drive to continuously learn. </span>
               </p>
             </div>
             <div className={styles.techStack+' glass'}>
                 <div className={styles.track}>
-                {Object.keys(techStack).map((tch)=><div className={styles.techContainer} key={techStack[tch as techT].title}><Image src={techStack[tch as techT].icon.src} placeholder="blur" blurDataURL={techStack[tch as techT].icon.src} alt={techStack[tch as techT].title} sizes='(max-width: 768px) 100%, 33%' fill/></div>)}
+                                    {Object.keys(techStack).map((tch)=><div className={styles.techContainer} key={techStack[tch as techT].title}><Image src={techStack[tch as techT].icon.src} placeholder="blur" blurDataURL={techStack[tch as techT].icon.src} alt={techStack[tch as techT].title} sizes='(max-width: 768px) 100%, 33%' fill/></div>)}
 
                   {Object.keys(techStack).map((tch)=><div className={styles.techContainer} key={techStack[tch as techT].title}><Image src={techStack[tch as techT].icon.src} placeholder="blur" blurDataURL={techStack[tch as techT].icon.src} alt={techStack[tch as techT].title} sizes='(max-width: 768px) 100%, 33%' fill/></div>)}
                 </div>
@@ -64,7 +64,7 @@ export default function Home() {
           <div className={styles.linksSection+' glass'}>
 
             <div className={styles.linksDiv+' glass'}>
-              <p>contact me at:</p>
+              <p>contact me at</p>
               <a href="https://github.com/lielbidago" className={styles.links} aria-label='github link' target='_blank'><GithubSVG/></a>
               <span className={styles.or}>or</span> 
               <a href="https://www.linkedin.com/in/liel-bidago/" className={styles.links} aria-label='linkedin link' target='_blank'><LinkedinSVG/></a>              
