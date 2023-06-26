@@ -109,6 +109,13 @@
   'image text'
   'tech tech';
   place-items: center;
+
+  .accent{
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.281);
+  }
 }
 .about h1{
   grid-area: title;
@@ -425,12 +432,7 @@ $animationSpeed: 18s;
       font-size: 1.5rem;
       line-height: 1.8rem;
 
-      .accent{
-        font-weight: bold;
-        color: rgb(255, 255, 255);
-        text-decoration: underline;
-        text-decoration-color: rgba(255, 255, 255, 0.429);
-      }
+
     }
 
     .aboutContent{
