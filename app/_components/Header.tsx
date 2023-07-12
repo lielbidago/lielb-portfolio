@@ -7,9 +7,11 @@ import ThemeToggle from './ThemeToggle';
 
 
 export default function Header(){
+
     const [showMenu, setShowMenu] = useState(false);
     const toggleShowMenu = () => {setShowMenu(!showMenu)};
-    const [theme, setTheme] = useState('light');
+    const isMediaPrefrenceDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const [theme, setTheme] = useState(isMediaPrefrenceDark?'dark':'light');
 
     return (
         <>        

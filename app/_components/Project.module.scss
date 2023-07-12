@@ -45,15 +45,15 @@
     transition: 0.4s;
 }
 
-.techContainer{
-    position: relative;
-    width:100%;
-    max-width: 30px;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    margin: auto;
+// .techContainer{
+//     position: relative;
+//     width:100%;
+//     max-width: 30px;
+//     aspect-ratio: 1/1;
+//     object-fit: cover;
+//     margin: auto;
 
-}
+// }
 .project:hover .title{
     padding: 0 20%;
     transition: 0.4s;
@@ -71,9 +71,10 @@
 .project .descp{
     grid-area: desc;
     padding:5%;
-    font-size: 130%;
+    font-size: 110%;
     height: 5rem;
     overflow-y:auto;
+    margin:2%;
 }
 .project .code_and_stack{
     grid-area: code-and-stack;
@@ -82,18 +83,19 @@
     width: 100%;
     margin-top: 3%;
 }
+
 .stack{
     width: 50%;
-}
-
-.project .stack{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .button{
-    padding:1%;
+    padding:2%;
     margin:1%;
+    aspect-ratio: 1/1;
+    align-items: center;
     text-decoration: none;
     text-align: center;
     border-radius: 12px;
@@ -101,9 +103,10 @@
     background-color: transparent;
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     span{
-        font-size: 1rem;
+        font-size: 70%;
         font-weight: lighter;
     }
 }

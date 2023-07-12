@@ -2,13 +2,14 @@ import image from '../public/liel-cropped2.webp';
 import image2 from '../public/liel-img-2.webp';
 import styles from './page.module.scss';
 import Project from './_components/Project';
-import { projects, techStack } from './projectsList';
+import { projects, techStack, techT } from './projectsList';
 import LinkedinSVG from './_logos/linkedin';
 import GithubSVG from './_logos/github';
 import Image from 'next/image';
+import TechContainer from './_components/TechContainer';
 
 
-type techT =keyof typeof techStack;
+// type techT =keyof typeof techStack;
 
 export default function Home() {
   
@@ -40,9 +41,10 @@ export default function Home() {
             </div>
             <div className={styles.techStack+' glass'}>
                 <div className={styles.track}>
-                                    {Object.keys(techStack).map((tch)=><div className={styles.techContainer} key={techStack[tch as techT].title}><Image src={techStack[tch as techT].icon.src} placeholder="blur" blurDataURL={techStack[tch as techT].icon.src} alt={techStack[tch as techT].title} sizes='(max-width: 768px) 100%, 33%' fill/></div>)}
+                                    {Object.keys(techStack).map((tech)=><TechContainer tech={techStack[tech as techT]}/>)}
+                                    {Object.keys(techStack).map((tech)=><TechContainer tech={techStack[tech as techT]}/>)}
 
-                  {Object.keys(techStack).map((tch)=><div className={styles.techContainer} key={techStack[tch as techT].title}><Image src={techStack[tch as techT].icon.src} placeholder="blur" blurDataURL={techStack[tch as techT].icon.src} alt={techStack[tch as techT].title} sizes='(max-width: 768px) 100%, 33%' fill/></div>)}
+
                 </div>
 
             </div>            
@@ -54,7 +56,7 @@ export default function Home() {
             <div className={styles.container}>
               {projects.slice(Math.min(0,projects.length,2)).map((p)=> <Project project={p} key={p.title}/>)}
             </div>
-            <a href="/projects" aria-label='projects section' className={styles.button+' button'}>For More..</a>
+            <a href="/projects" aria-label='projects section button' className={styles.button+' button'}>For More..</a>
           </div>
       </div>
       <div className={styles.contact} id='contact'>
