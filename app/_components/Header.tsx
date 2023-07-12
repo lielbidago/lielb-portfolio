@@ -1,7 +1,7 @@
 'use client'
 import styles from './Header.module.scss';
 import MenuList from './MenuList';
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import Menu from './Menu';
 import ThemeToggle from './ThemeToggle';
 
@@ -10,8 +10,17 @@ export default function Header(){
 
     const [showMenu, setShowMenu] = useState(false);
     const toggleShowMenu = () => {setShowMenu(!showMenu)};
-    const isMediaPrefrenceDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const [theme, setTheme] = useState(isMediaPrefrenceDark?'dark':'light');
+
+    const [theme, setTheme] = useState('light');
+    const getMediaPrefrenceColorScheme = useCallback(() => {
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches){
+            setTheme('dark');
+        }
+    },[]);
+    
+    useEffect(()=>{
+        getMediaPrefrenceColorScheme()
+    },[getMediaPrefrenceColorScheme]);
 
     return (
         <>        
