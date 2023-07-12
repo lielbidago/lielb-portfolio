@@ -1,0 +1,16 @@
+.techContainer{
+  position: relative;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  min-width: 25px;
+  width:2rem;
+  margin:2%;
+  transition: 0.9s;
+  max-height:100%;
+
+}
+
+.techContainer img:hover{
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.247);
+  transition: 0.4s;
+}
