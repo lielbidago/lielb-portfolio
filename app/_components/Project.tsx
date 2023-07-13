@@ -22,7 +22,7 @@ export default function Project({project}:projectProps){
                 <p className={styles.descp}>{project.desc}</p>
                 <div className={styles.code_and_stack}>
                     <div className={styles.stack}>
-                        {project.tech.map((t) => <TechContainer tech={t}/>)}
+                        {project.tech.map((t) => <TechContainer key={t.title} tech={t}/>)}
                     </div>
                     {project.githubUrl.client && <a className={styles.button} href={project.githubUrl.client} aria-label='link to client code'><TechContainer tech={techStack['github']}/><span>Client</span></a>}
                     {project.githubUrl.server && <a className={styles.button} href={project.githubUrl.server} aria-label='link to server code'><TechContainer tech={techStack['github']}/><span>Server</span></a>}            
