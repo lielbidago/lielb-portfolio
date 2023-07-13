@@ -41,8 +41,8 @@ export default function Home() {
             </div>
             <div className={styles.techStack+' glass'}>
                 <div className={styles.track}>
-                                    {Object.keys(techStack).map((tech)=><TechContainer tech={techStack[tech as techT]}/>)}
-                                    {Object.keys(techStack).map((tech)=><TechContainer tech={techStack[tech as techT]}/>)}
+                                    {Object.keys(techStack).map((tech)=><TechContainer key={tech} tech={techStack[tech as techT]}/>)}
+                                    {Object.keys(techStack).map((tech)=><TechContainer key={tech} tech={techStack[tech as techT]}/>)}
 
 
                 </div>

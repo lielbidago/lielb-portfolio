@@ -10,7 +10,6 @@ interface projectProps{
 }
 
 export default function Project({project}:projectProps){
-    project.tech.map((t)=>console.log(t))
     return (
         <div className={styles.project+' glass'}>
             <div className={styles.example}>
