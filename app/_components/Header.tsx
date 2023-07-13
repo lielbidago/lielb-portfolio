@@ -13,7 +13,8 @@ export default function Header(){
 
     const [theme, setTheme] = useState('light');
     const getMediaPrefrenceColorScheme = useCallback(() => {
-        if (window.matchMedia("(prefers-color-scheme: dark)").matches){
+        const prefrenceQuery = window.matchMedia("(prefers-color-scheme: dark)")
+        if (prefrenceQuery && prefrenceQuery.matches){
             setTheme('dark');
         }
     },[]);
