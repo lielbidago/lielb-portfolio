@@ -2,12 +2,15 @@
 :root{
   --textColor: rgb(217, 215, 215);
   --hoverColor:rgba(255, 255, 255, 0.85);
-  --accentLight:#beb878e3;
+  --accentLight:#835980e3;
   --accentDark:rgba(208, 8, 234, 0.755);
-  --theme1: var(--accentLight);
-  --themeLight:rgb(205, 193, 159, 0.4);
+  --theme1: var(--accentDark);
+  --themeLight:rgba(158, 133, 154, 0.4);
   --themeDark:rgba(175, 137, 202, 0.155);
-  --themeCurrent:var(--themeLight);
+  --themeCurrent:var(--themeDark);
+  --darkBg:url(/darkbg3.webp);
+  --lightBg:radial-gradient(circle, rgba(73, 73, 73, 0.146) 41%, rgba(0, 0, 0, 0.051) 100%), 
+  url(/light-pink-bg.webp);
   --theme5:#d9d9d9;
   color-scheme: light dark;
 }
@@ -28,50 +31,40 @@ html{
 
 body:has(.dark){
   background-color:black;
-  background-image: url(/darkbg3.webp);
+  background-image: var(--darkBg);
   --themeCurrent:var(--themeDark);
   --theme1: var(--accentDark);
   --textColor: rgb(217, 215, 215);
-  // animation: fade 2s ease-in-out 0.5s;
 }
 
 @media (prefers-color-scheme: dark){
   body:has(.dark){
     background-color:black;
-    background-image: url(/darkbg3.webp);
+    background-image: var(--darkBg);
     --themeCurrent:var(--themeDark);
     --theme1: var(--accentDark);
     --textColor: rgb(217, 215, 215);
-    // animation: fade 2s ease-in-out 0.5s;
   }
 }
-
 body:has(.light){
-  background-image: radial-gradient(circle, rgba(73, 73, 73, 0.146) 41%, rgba(0, 0, 0, 0.051) 100%), url(/whitebg2.webp);
+  background-image: var(--lightBg);
   --themeCurrent:var(--themeLight);
   --theme1:var(--accentLight);
   --textColor: white;
-  // animation: fade 2s ease-in-out 0.5s;
 }
 
 @media (prefers-color-scheme: light){
   body:has(.light){
-    background-image: radial-gradient(circle, rgba(73, 73, 73, 0.146) 41%, rgba(0, 0, 0, 0.051) 100%), url(/whitebg2.webp);
+    background-image: var(--lightBg);    
     --themeCurrent:var(--themeLight);
     --theme1:var(--accentLight);
     --textColor: white;
-    // animation: fade 2s ease-in-out 0.5s;
   }
-}
-@keyframes fade {
-	0% { opacity: 0.3;}
-	50% { opacity: 0.5;}
-  100%{opacity: 1;}
 }
 
 body{
-  background-color: var(--theme5);
-  background-image: url(/whitebg2.webp);
+  background-color: var(--themeCurrent);
+  background-image: url(/darkbg3.webp);
   background-size: cover;
   background-position: center; 
   background-repeat: no-repeat;

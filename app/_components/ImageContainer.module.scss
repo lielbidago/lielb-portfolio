@@ -1,0 +1,12 @@
+.imageContainer{
+    grid-area: image;
+    position: relative;
+    width:100%;
+    max-width: 500px;
+    min-height: 150px;
+    height:100%;
+    
+    img{
+        object-fit: contain;
+    }
+}

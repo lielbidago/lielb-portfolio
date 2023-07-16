@@ -5,11 +5,8 @@ import Project from './_components/Project';
 import { projects, techStack, techT } from './projectsList';
 import LinkedinSVG from './_logos/linkedin';
 import GithubSVG from './_logos/github';
-import Image from 'next/image';
 import TechContainer from './_components/TechContainer';
-
-
-// type techT =keyof typeof techStack;
+import ImageContainer from './_components/ImageContainer';
 
 export default function Home() {
   
@@ -20,19 +17,20 @@ export default function Home() {
           <div className={styles.introContent+' glass'}>
             <div className={styles.text}>
               <span>Hi! <span className={styles.accent}>Im liel, </span>A junior <span className={styles.accent}>web developer!</span> <br/></span>
-              </div>
-            <div className={styles.imageContainer}>
-              <Image src={image.src} placeholder="blur" blurDataURL={image.src} alt='image-of-liel-1' priority sizes='(max-width: 768px) 100vw, 33vw' fill/>
             </div>
+            <ImageContainer image={image} altText={'image-of-liel-1'} isPrioity={true}/>
+            {/* <div className={styles.imageContainer}>
+              <Image src={image.src} placeholder="blur" blurDataURL={image.src} alt='image-of-liel-1' priority sizes='(max-width: 768px) 100vw, 33vw' fill/>
+            </div> */}
         </div>
       </div>
       <div className={styles.about} id="about">
         <div className={styles.aboutContent+' glass'}>
-            <h1 className='pageHeader'>About Me</h1>
-              
-            <div className={styles.imageContainer+' glass'}>
+            <h1 className='pageHeader' >About Me</h1>
+            <ImageContainer image={image2} altText={'image-of-liel-2'} ImageStyle={{objectFit:'cover'}} contStyle={{width:'60%',height:'auto'}}/>
+            {/* <div className={styles.imageContainer+' glass'}>
               <Image src={image2.src} alt='image-of-liel-2' placeholder="blur" blurDataURL={image2.src}  style={{objectFit:'cover'}} sizes='(max-width: 768px) 100vw, 33vw' className={styles.liel} fill/>
-            </div>
+            </div> */}
               
             <div className={styles.text}>
               <p>Possessing a <span className={styles.accent}>passion</span>  for creating <span className={styles.accent}>clean, efficient code, </span>dynamic and

@@ -1,17 +1,4 @@
 import { StaticImageData } from "next/image"
-
-// import html5 from '../public/html5.webp';
-// import react from '../public/react.webp';
-// import js from '../public/javascript.webp';
-//import ts from '../public/typescript.webp';
-// import sass from '../public/sass.webp';
-// import bootstrap from '../public/bootstrap.webp';
-// import python from '../public/python.webp';
-
-// import sql from '../public/sql.webp';
-// import node from '../public/node.webp';
-// import git from '../public/git.webp';
-
 import express from '../public/express.webp';
 import PomodoTodo from '../public/pomodotodo.webp';
 import wordle from '../public/wordle.webp';

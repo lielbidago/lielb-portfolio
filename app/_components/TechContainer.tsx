@@ -9,6 +9,6 @@ interface techContainerProps{
 
 export default function TechContainer({tech, sizes='(max-width: 768px) 100%, 33%'}:techContainerProps){
     return (
-        <div className={styles.techContainer} key={tech.title}><Image src={tech.icon}  alt={tech.title} sizes={sizes} fill/></div>
+        <div className={styles.techContainer} key={tech.title}><Image src={tech.icon} loading='lazy' alt={tech.title} sizes={sizes} fill/></div>
     )
 }

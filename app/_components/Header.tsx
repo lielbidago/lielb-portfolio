@@ -1,25 +1,19 @@
 'use client'
 import styles from './Header.module.scss';
 import MenuList from './MenuList';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useState } from 'react';
 import Menu from './Menu';
 import ThemeToggle from './ThemeToggle';
+import useTheme from '../_hooks/useTheme';
 
 
 export default function Header(){
 
     const [showMenu, setShowMenu] = useState(false);
-    const toggleShowMenu = () => {setShowMenu(!showMenu)};
+    const toggleShowMenu = () => setShowMenu(!showMenu);
+    const {theme, setTheme, getMediaPrefrenceColorScheme } = useTheme();
 
-    const [theme, setTheme] = useState('light');
-    const getMediaPrefrenceColorScheme = useCallback(() => {
-        const prefrenceQuery = window.matchMedia("(prefers-color-scheme: dark)")
-        if (prefrenceQuery && prefrenceQuery.matches){
-            setTheme('dark');
-        }
-    },[]);
-    
-    useEffect(()=>{
+    useLayoutEffect(()=>{
         getMediaPrefrenceColorScheme()
     },[getMediaPrefrenceColorScheme]);
 
@@ -33,7 +27,7 @@ export default function Header(){
 
                 <nav className={styles.NavBar}>
 
-                    {!showMenu && <button className={styles.menuButton} aria-label='menu button' onClick={()=>{toggleShowMenu()}}>
+                    {!showMenu && <button className={styles.menuButton} aria-label='menu button' onClick={toggleShowMenu}>
                         <svg width="28" height="17" xmlns="http://www.w3.org/2000/svg"><g fillRule="evenodd"><path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z"/><path d="M0 0h40v3H0z"/></g></svg>
                     </button>}
                     <MenuList />
