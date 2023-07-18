@@ -27,10 +27,10 @@
 
 .aboutContent, .introContent, .projectsContent, .contactContent{
   width: 70%;
-  height:80%;
+  height:70%;
   min-width: fit-content;  
   background: rgb(217,217,217);
-  background: radial-gradient(circle, var(--themeCurrent) 26%, rgba(229, 229, 229, 0) 100%);
+  background: radial-gradient(circle, var(--themeCurrent) 35%, rgba(229, 229, 229, 0) 100%);
 }
 
 .accent{
@@ -66,13 +66,6 @@
   width: fit-content;
   justify-content: space-around;
 
-  .imageContainer{
-    width: 30%;
-    
-    img{
-      object-fit: cover;
-    }
-  }
   .text{
     width: 50%;
     margin:5%;
@@ -325,6 +318,63 @@ $animationSpeed: 18s;
   }
 }
 
+@media(max-width: 1113px){
+  .intro{
+    
+    .introContent{
+      margin: 5%;
+      aspect-ratio: 1/1;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: fit-content;
+
+      
+      .text{
+        width: 90%;
+        text-align: center;
+        margin-bottom: 0;
+        height:50%;
+
+        span{
+          font-size: 2rem;
+          font-stretch: 100%;
+        }
+
+        .accent{
+          font-size: 250%;
+        }
+      }
+      
+    }
+  }
+  .aboutContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:5%;
+    height:55%;
+    min-height: fit-content;
+    padding: 3%;
+    justify-content: space-around;
+    aspect-ratio: 1/1;
+
+    .text{
+      width:70%;
+        p{
+        font-size: 150%;
+        font-stretch: 100%;
+      }
+    }
+
+    .techStack{
+      margin:2%;
+      margin-top: 5%;
+    }
+
+  }
+}
+
 @media (max-width: 768px){
   .introContent, .aboutContent,
    .projects .container, .linksSection, .linksDiv{
@@ -346,29 +396,24 @@ $animationSpeed: 18s;
   .intro{
     
     .introContent{
-      margin: 5%;
-  
+      aspect-ratio: 1/1;
+      margin:5%;
+      height:50%; 
+
       .text{
         width: 90%;
         text-align: center;
         margin-bottom: 0;
 
-        span{
-          line-height: 3rem;
-        }
+        // span{
+        //   line-height: 2rem;
+        // }
 
         .accent{
-          font-size: 3rem;
+          font-size: 2.5rem;
         }
       }
 
-      .imageContainer{
-        width:100%;
-        img{
-          object-fit: contain;
-        }
-      
-      }
       
     }
   }
@@ -414,9 +459,7 @@ $animationSpeed: 18s;
     width: 90%;
   }
   .about{
-    .text{
-      width: 100%;
-    }
+
     
     .text p{
       font-size: 1.5rem;
@@ -426,10 +469,14 @@ $animationSpeed: 18s;
     }
 
     .aboutContent{
-      height: 90%;
+      height: 75%;
       width: 93%;
       margin: 5%;
       min-width: 0;
+
+      .text{
+        width: 100%;
+      }
 
       .techStack{
         width: 100%;
@@ -441,18 +488,4 @@ $animationSpeed: 18s;
 
 }
 
-@media(max-width: 1113px){
-  .aboutContent{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height:60%;
-    padding: 5%;
-    justify-content: space-around;
 
-    .techStack{
-      margin-top: 6%;
-    }
-
-  }
-}
