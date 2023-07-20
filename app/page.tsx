@@ -16,7 +16,7 @@ export default function Home() {
       <div className={styles.intro} aria-label='introduction'>
           <div className={styles.introContent+' glass'}>
             <div className={styles.text}>
-              <span>Hi! <span className={styles.accent}>Im liel, </span>A junior <span className={styles.accent}>web developer!</span> <br/></span>
+              <p>Hi! <span className={styles.accent}>Im liel, </span>A junior <span className={styles.accent}>web developer!</span> <br/></p>
             </div>
             <ImageContainer image={image} altText={'image-of-liel-1'} isPrioity={true}/>
             {/* <div className={styles.imageContainer}>
@@ -27,7 +27,7 @@ export default function Home() {
       <div className={styles.about} id="about">
         <div className={styles.aboutContent+' glass'}>
             <h1 className='pageHeader' >About Me</h1>
-            <ImageContainer image={image2} altText={'image-of-liel-2'} ImageStyle={{objectFit:'cover'}} contStyle={{width:'60%',height:'auto'}}/>
+            <ImageContainer image={image2} altText={'image-of-liel-2'} ImageStyle={{objectFit:'cover'}} contStyle={{width:'50%',height:'auto', aspectRatio:'1/1'}}/>
             {/* <div className={styles.imageContainer+' glass'}>
               <Image src={image2.src} alt='image-of-liel-2' placeholder="blur" blurDataURL={image2.src}  style={{objectFit:'cover'}} sizes='(max-width: 768px) 100vw, 33vw' className={styles.liel} fill/>
             </div> */}

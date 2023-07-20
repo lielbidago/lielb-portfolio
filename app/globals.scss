@@ -91,20 +91,6 @@ button, .button{
   background-color: transparent;
   font-weight:bold;
 }
-button, .button, .email{
-  transition: 0.4s;
-  backdrop-filter: blur(20px);
-
-}
-button:hover, .button:hover, .email:hover{
-  img{
-    filter: invert(10%) sepia(26%) saturate(291%) hue-rotate(5deg) brightness(88%) contrast(83%);
-  } 
-  
-  color: var(--theme1);
-  background: white;
-  transition: 0.4s;
-}
 
 h1{
   text-align: center;
